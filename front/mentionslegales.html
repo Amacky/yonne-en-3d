@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>L'Yonne en 3D - Accueil</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--
+    HEADER
+-->
+    <header id="main_header">
+        <div class="main_header_content row">
+            <div class="col-2 col-md-4">
+                <a id="btn_menu"><i class="fas fa-bars"></i><i class="hide fas fa-times"></i></a>
+            </div>
+            <div class="col-10 col-md-4 logo_container">
+                <a class="logo" href="">L'Yonne en 3D</a>
+            </div>
+            <div class="col-md-4 login_container text-right">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register_modal">S'inscrire</button>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#login_modal">Connexion</button>
+            </div>
+        </div>
+    </header>
+
+    <!--MENU-->
+    <div class="main_menu">
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">Accueil</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="index.html/#about">Comment ça marche?</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--MODAL REGISTER-->
+    <div class="modal fade" id="register_modal" tabindex="-1" role="dialog" aria-labelledby="register_modal_label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="register_modal_label">Créer un compte</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form class="sign_form a4">
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <input type="text" class="form-control" id="inputname" placeholder="Nom d'utilisateur">
+                            </div>
+                            <div class="form-group col-12">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Adresse mail">
+                            </div>
+                            <div class="form-group col-12">
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Mot de passe">
+                            </div>
+                            <div class="form-group col-12">
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="Confirmation du Mot de passe">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn butn">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL LOGIN-->
+    <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="login_modal_label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="login_modal_label">Connexion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form class="sign_form a4">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Adresse mail">
+                            </div>
+                            <div class="form-group col-md-6">
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Mot de passe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                se souvenir de moi
+                            </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn butn">Connexion</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ITEM -->
+    <div class="modal fade" id="item_modal" tabindex="-1" role="dialog" aria-labelledby="item_modal_label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="item_modal_label">Paul Bert</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img class="img-fluid" src="img/monuments/paul-bert.jpg" alt="Statue Paul Bert">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p>La statue de Paul Bert ou Monument à Paul Bert est une statue représentant Paul Bert érigée sur le Pont Paul-Bert à Auxerre dans l'Yonne en France. Elle est inaugurée le 7 juillet 1889 et a vu sa construction financée par une souscription nationale. Son sculpteur est Émile Peynot, son fondeur est Jaboeuf (de la société Jaboeuf et Bezout) et son architecte est Victor-Auguste Blavette.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Télécharger</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+<!--
+    MAIN
+-->
+    <main>
+
+    <!--MENTIONS LEGALES-->
+    <section id="ml">
+        <div class="mentions_legales py-5">
+            <h1>Nos Mentions Légales</h1>
+            <h2>La raison sociale</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet non asperiores ut dicta incidunt reiciendis nam ipsum ex labore maiores, minima cupiditate pariatur, sunt animi voluptatem dolor, molestias ad. Excepturi.</p>
+            <h2>Le siège social</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet non asperiores ut dicta incidunt reiciendis nam ipsum ex labore maiores, minima cupiditate pariatur, sunt animi voluptatem dolor, molestias ad. Excepturi.</p>
+            <h2>Le numéro de téléphone</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet non asperiores ut dicta incidunt reiciendis nam ipsum ex labore maiores, minima cupiditate pariatur, sunt animi voluptatem dolor, molestias ad. Excepturi.</p>
+            <h2>Le nom du directeur de la publication ou du responsable de la rédaction. S’il y a lieu, le capital social et le numéro d’inscription au registre du commerce et des sociétés (RCS)</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet non asperiores ut dicta incidunt reiciendis nam ipsum ex labore maiores, minima cupiditate pariatur, sunt animi voluptatem dolor, molestias ad. Excepturi.</p>
+            <h2>Nom de l’hébergeur</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet non asperiores ut dicta incidunt reiciendis nam ipsum ex labore maiores, minima cupiditate pariatur, sunt animi voluptatem dolor, molestias ad. Excepturi.</p>
+            <h2>Adresse de l’hébergeur</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet non asperiores ut dicta incidunt reiciendis nam ipsum ex labore maiores, minima cupiditate pariatur, sunt animi voluptatem dolor, molestias ad. Excepturi.</p>
+            <h2>Numéro de téléphone de l’hébergeur</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet non asperiores ut dicta incidunt reiciendis nam ipsum ex labore maiores, minima cupiditate pariatur, sunt animi voluptatem dolor, molestias ad. Excepturi.</p>            
+        </div>
+    </section>
+
+
+    <!--FOOTER-->
+        <footer id="main_footer">
+            <div class="main_footer_content row">
+                <div class="col-12 col-md-4 mb-4 menu text-center">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                        <li><a href="index.html/#about">Comment ça marche?</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="mentionslegales.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 mb-4 contact text-center">
+                    <h3>Nous contacter</h3>
+                    <p>Nom de l'assoc</p>
+                    <p>Adresse</p>
+                    <p>00000 Auxerre</p>
+                </div>
+                <div class="col-12 col-md-4 mb-4 reseaux text-center">
+                    <h3>Suivez-nous !</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/YonneEn3D/"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+    <!--COPYRIGHT-->
+            <div class="col-12 copyr">
+                <p>&copy; 2018 - L'Yonne en 3D</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
