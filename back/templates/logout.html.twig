@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}  {% block body %}
+
+<div aria-label="breadcrumb">
+    <ol class="breadcrumb mt-0">
+        <li class="breadcrumb-item"><a href="{{ path('home') }}">Accueil</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="#">Déconnexion</a></li>
+    </ol>
+</div>
+
+<!-- slogan -->
+<div class="jumbotron">
+
+    <h2>A bientot</h2>
+
+</div>
+
+{% if success is defined %}
+<div class="alert alert-success" role="alert">
+    {{ success }}
+</div>
+
+
+{% endif %} {% endblock %} {% block javascripts %} {% endblock %}

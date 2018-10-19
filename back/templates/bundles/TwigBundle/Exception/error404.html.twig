@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %} {% block h1 %}Erreur 404{% endblock %} {% block title %}Erreur 404{% endblock %} {% block body %}
+
+<!--
+    MAIN
+-->
+<main>
+
+        <!--404-->
+            <section id="error_404">
+                <div class="error_404_content row text-center py-5">
+                    <h1 class="col-12">OUPS!</h1>
+                    <div class="col-12">
+                        <p>Il n'y a rien à voir ici, pour retourner à la page d'accueil:</p>
+                        <p><a href="{{ path('home') }}"> Cliquer sur moi!</a></p>
+                    </div>
+                </div>
+            </section>
+
+            {% endblock %}

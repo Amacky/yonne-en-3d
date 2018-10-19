@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+ {% block title %}Gallerie{% endblock %}  
+
+{% block body %}
+
+
+
+<!--
+    MODAL ITEM
+-->
+<div class="modal fade" id="
+galerieitem_modal" tabindex="-1" role="dialog" aria-labelledby="galerieitem_modal_label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="galerieitem_modal_label">Statue de Paul Bert</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img class="img-fluid" src="img/monuments/paul-bert.jpg" alt="Statue Paul Bert">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p>La statue de Paul Bert ou Monument à Paul Bert est une statue représentant Paul Bert érigée sur le Pont Paul-Bert à Auxerre dans l'Yonne en France. Elle est inaugurée le 7 juillet 1889 et a vu sa construction financée par une souscription nationale. Son sculpteur est Émile Peynot, son fondeur est Jaboeuf (de la société Jaboeuf et Bezout) et son architecte est Victor-Auguste Blavette.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Télécharger</button>
+                    </div>
+                    <div class="col-6">
+                        <a href=""><i class="fas fa-heart"></i></a>
+                        <a href=""><i class="fas fa-star"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+    MAIN
+-->
+    <main>
+             <!--GALERIE-->
+             {% block h1 %}Gallerie{% endblock %}
+        <section id="main_galerie">
+                <div class="main_galerie_content row text-center pt-5">
+    
+                    <div class="col-12 col-md-4">
+                        <a data-toggle="modal" data-target="#item_modal">
+                            <img class="img-fluid" src="img/monuments/paul-bert.jpg" alt="2">    
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="img/monuments/abbaye.jpg" alt="2"></div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="img/monuments/eglise-st-etienne.jpg" alt="2"></div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="img/monuments/musee.jpg" alt="2"></div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="img/monuments/st-pierre.jpg" alt="2"></div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="img/monuments/st-eusebe.jpg" alt="2"></div>
+                        <!-- <div class="col-12 mt-5">
+                            <a class="btn_1" href="">Plus de monuments</a>
+                        </div>
+         -->
+                    </div>
+                </section>
+                <script src="../js/three.js"></script>
+                <script src="../js/STLLoader.js"></script>
+                                <script src="../js/Detector.js"></script>
+                                <script src="../js/OrbitControls.js"></script>
+                                <script src="../js/handLoader.js"></script>
+
+
+
+
+
+
+
+{# </body> #}
+{# </html> #}
+
+{% endblock %}
+
+
+{% block javascript %}{% endblock %}

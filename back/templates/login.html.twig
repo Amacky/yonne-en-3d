@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}  
+
+{% block body %}
+
+<div aria-label="breadcrumb">
+    <ol class="breadcrumb mt-0">
+        <li class="breadcrumb-item"><a href="{{ path('home') }}">Accueil</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="#">Connexion</a></li>
+    </ol>
+</div>
+
+
+
+
+{# message d'erreur #}
+<div class="com-12 m-0">
+    {% if errors is defined %} {% for error in errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %} {% endif %} {# message de succes #} {% if success is defined %}
+
+    <div class="alert alert-success" role="alert">
+        {{ success }}
+    </div>
+    
+
+    {% endif %}
+</div>
+
+{# si succes n'est pas deffinit #} {% if success is not defined %}
+
+<div class="row">
+
+    {# formulaire #}
+    <div class="col-10 offset-1">
+        <form class="form-signin" action="{{ path('api_login') }}" method="POST">
+            <div class="text-center mb-4">
+                <svg class="logo-login" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="svg3794" width="175" height="175" viewBox="0 0 1122.5601 793.76001" sodipodi:docname="logo3dark.svg" inkscape:version="0.92.3 (2405546, 2018-03-11)" inkscape:export-filename="C:\Users\MAI\Desktop\logo3.png" inkscape:export-xdpi="96" inkscape:export-ydpi="96">
+      :
+                <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
+            </div>
+            <label for="inputEmail" class="sr-only">Email</label>
+            <input id="inputEmail" class="form-control mb-3" name="email" placeholder="email" required="" autofocus="" type="email">
+
+            <label for="inputPassword" class="sr-only">Mot de passe</label>
+            <input id="inputPassword" class="form-control" name="password" placeholder="mot de passe" required="" type="password">
+            <div class="checkbox mb-3">
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+        </form>
+    </div>
+</div>
+{% endif %} {% endblock %} {% block javascript %}{% endblock %}

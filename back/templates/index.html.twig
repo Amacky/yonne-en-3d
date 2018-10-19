@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %} {% block h1 %}Yonne en 3D{% endblock %} {% block title %}Yonne en 3D{% endblock %} {% block body %}
+
+<div aria-label="breadcrumb">
+    <ol class="breadcrumb mt-0">
+        <li class="breadcrumb-item"><a href="{{ path('home') }}">Accueil</a></li>
+    </ol>
+</div>
+
+<!--
+    MAIN
+-->
+<main>
+
+        <!-- BANNER -->
+            <section id="main_banner">
+                <div class="main_banner_content text-center">
+                    <img class="banner_img" src="img/wallpaper.jpg" alt="Auxerre">
+                    <div class="banner_content_container text-center">
+                        <h1>Découvrez l'Yonne en 3D</h1>
+    
+                        <a class="btn_2" href="{{ path('galerie') }}">Découvrir</a>
+                        <a class="btn_3"   href="{{ path('register') }}">S'inscrire</a>
+                    </div>
+                </div>
+            </section>
+    
+        <!--GALERIE-->
+        <section id="main_galerie">
+                <div class="main_galerie_content row text-center">
+    
+                    <div class="col-12 col-md-4">
+                        <a data-toggle="modal" data-target="#item_modal">
+                            <img class="img-fluid" src="img/monuments/paul-bert.jpg" alt="2">    
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="img/monuments/abbaye.jpg" alt="2"></div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="img/monuments/eglise-st-etienne.jpg" alt="2"></div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="img/monuments/musee.jpg" alt="2"></div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="img/monuments/st-pierre.jpg" alt="2"></div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="img/monuments/st-eusebe.jpg" alt="2"></div>
+    
+                    <div class="col-12 mt-5">
+                        <a class="btn_1" href="galerie.html"> En voir plus</a>
+                    </div>
+    
+                </div>
+            </section>
+
+ <!--ABOUT-->
+ <section id="about">
+        <div class="about_content text-center">
+            <h2>Comment ça marche?</h2>
+            <p class="p_1">Yonne en 3D est un site web, qui permet aux utilisateurs de télécharger dans un premier temps des fichiers en 3D et dans un second temps pouvoir partager des fichiers 3D en lien direct avec la culture artistique et culturelle afin de pouvoir les imprimer en 3D à l’aide de nouvelle technologie telle que la numérisation et l’impression 3D.</p>
+            
+            <p class="p_2">1.<br> Pour télécharger des fichiers rendez vous dans l’espace galerie.</p>
+
+            <p class="p_2">2.<br> Une oeuvre, un monument vous plaît? Cliquez sur l’image, une fenêtre apparaîtra et appuyer sur le bouton télécharger.</p>
+
+            <p class="p_2">3.<br> Profitez d’une expérience en 3 dimensions avec les différents monuments Icaunais!</p>
+        </div>
+    </section>
+
+     
+                                
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+
+{% block body %}
+     
+    {% block h1 %}Upload{% endblock %}
+
+    <div class="btn-group">
+                    <form class="col-12 " action="{{ path('api_upload') }}" method="POST" enctype="multipart/form-data">
+
+                        <label for="picture_updload"></label>
+                        <input type="file" name="picture_updload" id="picture_updload">
+
+
+                        <input type="hidden" name="MAX_FILE_SIZE" value="{{ uploaded_file_max_size }}">
+
+                        <button class="btn btn-primary" type="submit"><ion-icon name="arrow-back"></ion-icon> Upload de l'image</button>
+                    </form>
+                </div>
+
+    {% if errors is defined %}
+
+        {# équivalent d'un foreach php #}
+        {% for error in errors %}
+            <p style="color:red;">{{ error }}</p>
+        {% endfor %}
+
+    {% endif %}
+
+    {# Si la variable success existe, on l'affiche #}
+    {% if success is defined %}
+        <p style="color:green;">{{ success }}</p>
+    {% endif %}
+
+    </form>
+
+
+{% endblock %}
+
+
+{% block javascript %}{% endblock %}
